@@ -102,7 +102,7 @@ public class FilmeController {
     	ModelAndView mav = new ModelAndView("/filme/detalhe");
     	Filme filme = filmeDao.findOne(id);
 		List<Sessao> sessoes = sessaoDao.buscaSessoesDoFilme(filme);
-		Optional<DetalhesDoFilme> detalhesDoFilme = imdbClient.request(filme);
+		Optional<DetalhesDoFilme> detalhesDoFilme = imdbClient.request(filme, DetalhesDoFilme.class);
 		mav.addObject("sessoes",sessoes);
 		mav.addObject("detalhes",detalhesDoFilme.orElse(new DetalhesDoFilme()));
 		
