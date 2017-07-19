@@ -13,14 +13,16 @@
 				<tr>
 					<th>Nome</th>
 					<th>Duração</th>
+					<th>Preço</th>
 					<th colspan="2" class="text-center">Ações</th>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody> 
 				<c:forEach var="filme" items="${filmes}">
 					<tr>
 						<td>${filme.nome}</td>
 						<td>${filme.duracao.toMinutes()}</td>
+						<td>${filme.preco}</td>
 						<td>
 							<a onclick="excluir(${filme.id})" class="btn btn-danger">Excluir</a>
 						</td>

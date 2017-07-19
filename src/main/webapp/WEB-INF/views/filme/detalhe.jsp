@@ -48,7 +48,7 @@
 	            <span id="avaliacao">${detalhes.avaliacao}</span>
 	        </div>
 
-			<sec:authorize access="hasRole('COMPRADOR')">
+			
 				<table class="table table-hover">
 					<thead>
 						<th>Sala</th>
@@ -70,7 +70,6 @@
 						</c:forEach>
 					</tbody>
 				</table>
-			</sec:authorize>
 		</div>
     </jsp:body>
 </ingresso:template>

@@ -11,6 +11,7 @@
             <tr>
                 <th class="text-center">Nome</th>
                 <th colspan="4" class="text-center">Ações</th>
+                <th class="text-center">Preço</th>
             </thead>
             <tbody>
             <c:forEach var="sala" items="${salas}">
@@ -32,6 +33,7 @@
                     <td>
                         <a href="/admin/sala/${sala.id}" class="btn btn-info">Alterar</a>
                     </td>
+                    <td class="text-center">${sala.preco}</td>
                 </tr>
             </c:forEach>
             </tbody>
